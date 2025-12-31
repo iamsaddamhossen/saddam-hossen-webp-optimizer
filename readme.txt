@@ -1,55 +1,119 @@
 === Saddam Hossen WebP Optimizer ===
-Contributors: saddamhossen
-Tags: webp, performance, image-optimization, speed, compression
+Contributors: saddamweb
+Tags: webp, image optimization, performance, compression, core web vitals
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.9
+Requires PHP: 7.4
 Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://www.buymeacoffee.com/iamsaddamhossen
 
-High-performance, zero-cost, native image optimization. Converts uploads to WebP and resizes for maximum speed.
+High-performance, zero-cost image optimization. Converts images to WebP locally without external APIs.
 
 == Description ==
 
-Developed by **Saddam Hossen**, this plugin is a lightweight, high-performance utility designed to bridge the gap between heavy, subscription-based optimization plugins and manual coding. 
+**Stop paying for image optimization services.** This plugin converts your images to WebP format entirely on your server – no API keys, no monthly fees, no limits.
 
-Unlike many other optimizers, this plugin runs **locally on your server**. No API keys are required, and your images are never sent to a third-party server, ensuring 100% privacy and no monthly costs.
+= Why This Plugin? =
 
-**Key Features:**
-* **Automatic WebP Conversion**: Automatically converts JPEG, PNG, and GIF to WebP format upon upload.
-* **Smart Resizing**: Automatically scales down massive images to a custom maximum width (e.g., 1920px) to save disk space.
-* **Manual Conversion Tool**: Adds a "Convert to WebP" action in the Media Library (List View) to optimize existing images one-by-one.
-* **EXIF Orientation Correction**: Automatically rotates mobile-uploaded photos based on metadata.
-* **Smart Fallback**: The plugin only replaces the original file if the WebP version is actually smaller in size.
+Most image optimization plugins send your images to external servers, raising privacy concerns and subscription costs. This plugin:
+
+* ✅ Runs entirely on your server (100% privacy)
+* ✅ Zero ongoing costs (no API subscriptions)
+* ✅ Unlimited conversions
+* ✅ Faster processing (no external API calls)
+
+= Features =
+
+* **Auto-Convert on Upload** – Automatically converts JPG, PNG, and GIF to WebP
+* **Smart Resizing** – Reduces oversized images to web-friendly dimensions (default 1920px)
+* **Manual Conversion Tool** – Bulk convert existing images from Media Library
+* **EXIF Auto-Rotation** – Fixes incorrectly rotated mobile photos
+* **Intelligent Fallback** – Only replaces original if WebP is smaller
+* **Quality Control** – Adjustable compression settings (1-100%)
+
+= Performance Benefits =
+
+* 🚀 Improves Core Web Vitals scores
+* 📈 Passes Google's "next-gen formats" audit
+* 💾 Reduces storage by up to 80%
+* ⚡ Faster page loads (especially mobile)
+* 💰 Lower hosting and backup costs
+
+= System Requirements =
+
+* PHP 7.4 or higher
+* PHP Imagick extension enabled
+* WordPress 5.0 or higher
+
+= Privacy & Data =
+
+This plugin processes all images locally. Nothing is sent to external servers. Your images stay on your server.
 
 == Installation ==
 
-1. Upload the `sh-webp-optimizer` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Configure your desired quality and maximum width under **Settings > Media**.
-
-== Screenshots ==
-
-1. The settings panel integrated into the WordPress Media Settings.
-2. The manual "Convert to WebP" link in the Media Library list view.
-
-== Changelog ==
-
-= 1.1.0 =
-* Added: Manual conversion button for existing media library items.
-* Added: Security nonces and permission checks for manual actions.
-* Improved: Conversion engine now handles attachment metadata more efficiently.
-
-= 1.0.0 =
-* Initial release. Core WebP conversion and auto-resizing via PHP Imagick.
+1. Upload the plugin files to `/wp-content/plugins/sh-webp-optimizer`
+2. Activate the plugin through the 'Plugins' screen
+3. Go to Settings > Media to configure quality and dimensions
+4. Upload new images or use the bulk converter for existing images
 
 == Frequently Asked Questions ==
 
-= Does this require a subscription? =
-No. This plugin uses your server's native PHP Imagick library. There are no limits and no fees.
+= Does this require an API key? =
 
-= What happens to my original images? =
-To save space, the plugin replaces the original JPG/PNG with the WebP version if the WebP file is smaller. 
+No. Everything runs on your server using PHP Imagick.
 
-= Why don't I see the "Convert" link? =
-Make sure you are viewing your Media Library in **List View** rather than the Grid View.
+= Will this work on shared hosting? =
+
+Yes, if your host has Imagick enabled. Most quality hosts include it.
+
+= What if Imagick is not installed? =
+
+The plugin will display an admin notice with instructions for your host.
+
+= Can I convert existing images? =
+
+Yes. Each image in the Media Library gets a "Convert to WebP" button.
+
+= What if WebP is larger than the original? =
+
+The plugin keeps the original and skips conversion automatically.
+
+= Does this work with multisite? =
+
+Yes, it's multisite compatible.
+
+== Screenshots ==
+
+1. Settings panel in Media settings
+2. Manual conversion button in Media Library
+3. Before/After file size comparison
+4. Core Web Vitals improvement
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release
+* Auto-convert on upload
+* Manual bulk conversion
+* Smart resizing
+* EXIF auto-rotation
+* Quality settings
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial release.
+
+== Developer Notes ==
+
+This plugin uses PHP Imagick for high-quality, fast conversions. For development or contributions, visit:
+https://github.com/iamsaddamhossen/sh-webp-optimizer
+
+**Developed by [Saddam Hossen](https://saddamhossen.dev)**
+
+== Donations ==
+
+If you find this plugin useful and want to support its development, you can buy me a coffee!
+Donate here: https://www.buymeacoffee.com/iamsaddamhossen
